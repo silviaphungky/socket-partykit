@@ -35,7 +35,6 @@ export default class Server implements Party.Server {
           message: parsedMessage.message,
           sender: parsedMessage.sender,
           time: parsedMessage.time,
-          id: parsedMessage.id,
         }),
         [sender.id]
       )
@@ -45,6 +44,7 @@ export default class Server implements Party.Server {
         JSON.stringify({
           type: 'update_animation',
           message: parsedMessage.animation,
+          id: parsedMessage.id,
         }),
         [sender.id]
       )
